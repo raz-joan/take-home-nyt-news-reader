@@ -1,5 +1,7 @@
 import './App.css';
-import {useEffect} from 'react'
+import { useEffect } from 'react'
+import Search from '../Search/Search'
+import NewsArticlesContainer from '../NewsArticlesContainer/NewsArticlesContainer'
 
 function App() {
 
@@ -14,6 +16,10 @@ function App() {
       <header className="App-header">
         <h1>NYT NEWS READER</h1>
       </header>
+      <main>
+        <Search />
+        <NewsArticlesContainer />
+      </main>
     </div>
   );
 }
