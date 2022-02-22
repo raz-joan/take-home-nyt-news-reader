@@ -1,22 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {useEffect} from 'react'
 
 function App() {
+
+  // useEffect(() => {
+  //   fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE')
+  //     .then(res => res.json())
+  //     .then(data => console.log('response:', data))
+  // }, [])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>NYT NEWS READER</h1>
       </header>
     </div>
   );
