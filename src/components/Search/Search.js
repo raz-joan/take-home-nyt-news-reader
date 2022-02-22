@@ -13,12 +13,13 @@ const Search = ({ sendRequest }) => {
     event.preventDefault()
     console.log('search button clicked with category: ', category)
     sendRequest(category)
+    setCategory('')
   }
 
   return (
-    <form>
+    <form id='search-category-form'>
       <label htmlFor="category-select">Choose an article category:</label>
-      <select name="categories" id="category-select" onChange={e => handleChange(e)}>
+      <select name="categories" id="category-select" value={category} onChange={e => handleChange(e)}>
         <option value="">--Please choose an option--</option>
         <option value="arts">Arts</option>
         <option value="automobiles">Automobiles</option>
