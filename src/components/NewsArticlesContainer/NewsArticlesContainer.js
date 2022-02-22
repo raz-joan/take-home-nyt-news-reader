@@ -11,8 +11,7 @@ const NewsArticlesContainer = ({ articles }) => {
   })
 
   return (
-    <div>
-      <p>News Article Container</p>
+    <div className='news-articles-container'>
       {articlesJSX}
     </div>
   )

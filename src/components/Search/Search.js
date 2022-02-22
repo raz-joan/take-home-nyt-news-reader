@@ -12,14 +12,16 @@ const Search = ({ sendRequest }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
     console.log('search button clicked with category: ', category)
-    sendRequest(category)
-    setCategory('')
+    if (category) {
+      sendRequest(category)
+      setCategory('')
+    }
   }
 
   return (
-    <form id='search-category-form'>
-      <label htmlFor="category-select">Choose an article category:</label>
-      <select name="categories" id="category-select" value={category} onChange={e => handleChange(e)}>
+    <form id='search-category-form' className='search-category-form'>
+      <label htmlFor="category-select" className='form-text'>Want articles in a certain category?</label>
+      <select className='form-text form-select' name="categories" id="category-select" value={category} onChange={e => handleChange(e)}>
         <option value="">--Please choose an option--</option>
         <option value="arts">Arts</option>
         <option value="automobiles">Automobiles</option>
@@ -47,7 +49,7 @@ const Search = ({ sendRequest }) => {
         <option value="us">U.S.</option>
         <option value="world">World</option>
       </select>
-      <button onClick={e => {handleSubmit(e)}}>See articles in this category!</button>
+      <button className='form-text form-button' onClick={e => {handleSubmit(e)}}>See articles in this category!</button>
     </form>
   )
 }

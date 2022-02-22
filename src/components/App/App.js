@@ -28,13 +28,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      <header className='App-header'>
         <h1>NYT NEWS READER</h1>
       </header>
-      <main>
+      <main className='App-body'>
         <Search sendRequest={sendRequest}/>
-        <NewsArticlesContainer articles={articles}/>
+        {articles.length ? <NewsArticlesContainer articles={articles} /> : <p>Loading ...</p>}
       </main>
     </div>
   );
