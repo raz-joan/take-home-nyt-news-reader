@@ -6,6 +6,7 @@ import NewsArticlesContainer from '../NewsArticlesContainer/NewsArticlesContaine
 function App() {
 
   const [articles, setArticles] = useState([])
+  const [section, setSection] = useState('Home')
 
   useEffect(() => {
     fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE')
@@ -24,6 +25,8 @@ function App() {
       .then(data => {
         console.log('category response:', data)
         setArticles(data.results)
+        const title = category.slice(0, 1).toUpperCase() + category.slice(1)
+        setSection(title)
       })
   }
 
@@ -33,7 +36,8 @@ function App() {
         <h1>NYT NEWS READER</h1>
       </header>
       <main className='App-body'>
-        <Search sendRequest={sendRequest}/>
+        <Search sendRequest={sendRequest} />
+        <p className='home-page-note'>The following articles are from the <span className='to-bold'>{section} Page</span> of the New York Times.</p>
         {articles.length ? <NewsArticlesContainer articles={articles} /> : <p>Loading ...</p>}
       </main>
     </div>

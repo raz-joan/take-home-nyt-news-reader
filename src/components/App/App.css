@@ -27,3 +27,11 @@ font-family: 'Open Sans', sans-serif; */
   align-items: center;
   width: 100%;
 }
+
+.home-page-note {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.to-bold {
+  font-weight: bold;
+}
