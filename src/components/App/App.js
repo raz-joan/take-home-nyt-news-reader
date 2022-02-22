@@ -1,18 +1,30 @@
 import './App.css';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Search from '../Search/Search'
 import NewsArticlesContainer from '../NewsArticlesContainer/NewsArticlesContainer'
 
 function App() {
 
-  // useEffect(() => {
-  //   fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE')
-  //     .then(res => res.json())
-  //     .then(data => console.log('response:', data))
-  // }, [])
+  const [articles, setArticles] = useState([])
+
+  useEffect(() => {
+    fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE')
+      .then(res => res.json())
+      .then(data => {
+        console.log('home response:', data)
+        setArticles(data.results)
+      })
+  }, [])
 
   const sendRequest = (category) => {
-   console.log('category sent to App: ', category)
+    console.log('category sent to App: ', category)
+    console.log('current articles: ', articles)
+    fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE`)
+      .then(res => res.json())
+      .then(data => {
+        console.log('category response:', data)
+        setArticles(data.results)
+      })
   }
 
   return (
@@ -22,7 +34,7 @@ function App() {
       </header>
       <main>
         <Search sendRequest={sendRequest}/>
-        <NewsArticlesContainer />
+        <NewsArticlesContainer articles={articles}/>
       </main>
     </div>
   );
