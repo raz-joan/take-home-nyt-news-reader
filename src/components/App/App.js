@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import Landing from '../Landing/Landing'
 import DetailedNewsArticle from '../DetailedNewsArticle/DetailedNewsArticle'
+import nytimes from '../../assets/nytimes.png'
 
 function App() {
 
@@ -41,7 +42,8 @@ function App() {
         <header className='App-header'>
           <Link to='/' className='site-title'>
             <h1>NYT NEWS READER</h1>
-          </Link>
+            </Link>
+            <img className='site-icon' src={nytimes} alt='Data powered by the NYT API'/>
         </header>
         <main>
           <Routes>
