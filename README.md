@@ -2,7 +2,7 @@
 NYT News Reader Take-home Challenge
 </h1>  
 
-<a href="https://wheat-cute.herokuapp.com/"><strong>Deployed App »</strong></a>  
+<a href="https://raz-joan.github.io/take-home-nyt-news-reader/"><strong>Deployed App »</strong></a>  
 
 ## Table of Contents
 - [Overview](#overview)
