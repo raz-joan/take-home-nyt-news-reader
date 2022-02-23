@@ -1,9 +1,16 @@
+.detailed-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .detailed-news-article {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 5%;
+  width: 90%;
 }
 
 .detailed-article-title {
@@ -16,4 +23,12 @@
 .detailed-article-info {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 16px;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  img {
+    width: 80%;
+    height: auto;
+  }
 }

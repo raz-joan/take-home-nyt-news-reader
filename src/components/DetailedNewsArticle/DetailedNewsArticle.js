@@ -16,7 +16,7 @@ const DetailedNewsArticle = ({ articles }) => {
   }
 
   return (
-    <div>
+    <div className='detailed-container'>
       {!date ? <p>Loading ...</p> :
         <div className='detailed-news-article'>
           <h2 className='detailed-article-title'>{article.title}</h2>
