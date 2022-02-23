@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import Landing from '../Landing/Landing'
 import DetailedNewsArticle from '../DetailedNewsArticle/DetailedNewsArticle'
 
@@ -34,7 +34,9 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1>NYT NEWS READER</h1>
+        <Link to='/' className='site-title'>
+          <h1>NYT NEWS READER</h1>
+        </Link>
       </header>
       <main>
         <Routes>

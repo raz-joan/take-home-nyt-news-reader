@@ -6,6 +6,7 @@
   width: 90%;
   border: 1px solid black;
   margin: 2%;
+  padding: 2%;
 }
 
 .news-article-title {
@@ -22,7 +23,6 @@
 }
 
 .news-article-info {
-  /* font-family: 'News Cycle', sans-serif; */
   font-family: 'Libre Franklin', sans-serif;
   font-size: 14px;
 }

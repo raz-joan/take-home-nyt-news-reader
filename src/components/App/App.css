@@ -28,3 +28,8 @@ font-family: 'Open Sans', sans-serif; */
   font-size: 24px;
   color: red;
 }
+
+.site-title {
+  color: black;
+  text-decoration: none;
+}

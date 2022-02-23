@@ -7,7 +7,7 @@ const NewsArticlesContainer = ({ articles }) => {
   
   const articlesJSX = articles.map((article, index) => {
     return (
-      <Link to={`/articles/${index}`}>
+      <Link to={`/articles/${index}`} key={index} className='article-link'>
         <NewsArticle key={index} article={article}/>
       </Link>
     )
