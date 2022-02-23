@@ -1,12 +1,15 @@
 import React from 'react'
 import './NewsArticlesContainer.css'
 import NewsArticle from '../NewsArticle/NewsArticle'
+import {Link} from 'react-router-dom'
 
 const NewsArticlesContainer = ({ articles }) => {
   
   const articlesJSX = articles.map((article, index) => {
     return (
-      <NewsArticle key={index} article={article}/>
+      <Link to={`/articles/${index}`}>
+        <NewsArticle key={index} article={article}/>
+      </Link>
     )
   })
 

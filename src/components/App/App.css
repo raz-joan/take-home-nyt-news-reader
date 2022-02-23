@@ -20,18 +20,11 @@ font-family: 'Open Sans', sans-serif; */
   margin: 5%;
 }
 
-.App-body {
+.error-url-path {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-
-.home-page-note {
-  font-family: 'Libre Franklin', sans-serif;
-}
-
-.to-bold {
-  font-weight: bold;
+  font-family: 'Newsreader', serif;
+  font-size: 24px;
+  color: red;
 }

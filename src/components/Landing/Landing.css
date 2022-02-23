@@ -1,0 +1,15 @@
+.App-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.home-page-note {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.to-bold {
+  font-weight: bold;
+}

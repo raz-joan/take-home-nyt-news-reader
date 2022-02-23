@@ -1,7 +1,8 @@
 import './App.css';
 import { useEffect, useState } from 'react'
-import Search from '../Search/Search'
-import NewsArticlesContainer from '../NewsArticlesContainer/NewsArticlesContainer'
+import { Routes, Route } from 'react-router-dom'
+import Landing from '../Landing/Landing'
+import DetailedNewsArticle from '../DetailedNewsArticle/DetailedNewsArticle'
 
 function App() {
 
@@ -35,10 +36,12 @@ function App() {
       <header className='App-header'>
         <h1>NYT NEWS READER</h1>
       </header>
-      <main className='App-body'>
-        <Search sendRequest={sendRequest} />
-        <p className='home-page-note'>The following articles are from the <span className='to-bold'>{section} Page</span> of the New York Times.</p>
-        {articles.length ? <NewsArticlesContainer articles={articles} /> : <p>Loading ...</p>}
+      <main>
+        <Routes>
+          <Route path='/' element={<Landing sendRequest={sendRequest} articles={articles} section={section}/>} />
+          <Route path='/articles/:index' element={<DetailedNewsArticle articles={articles}/>} />
+          <Route path='/*' element={<p className='error-url-path'>404: This page does not exist. Sorry!</p>}/>
+        </Routes>
       </main>
     </div>
   );
