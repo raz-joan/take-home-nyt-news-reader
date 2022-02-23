@@ -1,0 +1,40 @@
+{
+  "results" : [
+    {
+      "abstract": "After months of tuning out American warnings that Vladimir Putin was preparing to invade Ukraine, Russians now realize that “this is not a game.”",
+      "byline": "By Anton Troianovski",
+      "multimedia": [
+        {},
+        {
+          "caption": "The possibility of war is one of the greatest fears for Russians, who may have dismissed it as an outlandish concoction until recently.",
+          "height": 1367,
+          "url": "https://static01.nyt.com/images/2022/02/23/world/23russia-unease/merlin_201177390_d8e35668-cbd9-4fa8-956b-2443668ce088-superJumbo.jpg",
+          "width": 2048
+        }
+      ],
+      "published_date": "2022-02-23T16:39:38-05:00",
+      "section": "world",
+      "short_url": "https://nyti.ms/3JT2MBF",
+      "title": "For Many Russians, a Deep Unease Over Gathering Specter of War",
+      "url": "https://www.nytimes.com/2022/02/23/world/europe/russia-ukraine-war-putin.html"
+    },
+    {
+      "abstract": "Whether you call it a correction or a panic attack, a stock market that was already becoming shaky has been roiled by Russia’s hostilities toward Ukraine.",
+      "byline": "By Jeff Sommer",
+      "multimedia": [
+        {},
+        {
+          "caption": "People watch the sunset near the port of Odessa in Ukraine, last week.",
+          "height": 1366,
+          "url": "https://static01.nyt.com/images/2022/02/23/business/23market-correction/merlin_202407435_1ad32f06-bab7-4f8c-8d27-a7483e9698f3-superJumbo.jpg",
+          "width": 2048
+        }
+      ],
+      "published_date": "2022-02-23T10:13:35-05:00",
+      "section": "business",
+      "short_url": "https://nyti.ms/3HeOYzm",
+      "title": "More Trouble for a Troubled Market",
+      "url": "https://www.nytimes.com/2022/02/23/business/stock-market-correction.html"
+    }
+  ]
+}
