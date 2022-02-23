@@ -19,12 +19,12 @@ const DetailedNewsArticle = ({ articles }) => {
     <div>
       {!date ? <p>Loading ...</p> :
         <div className='detailed-news-article'>
-          <img src={article.multimedia[1].url} alt={article.multimedia[1].caption} />
           <h2 className='detailed-article-title'>{article.title}</h2>
-          <p>{article.byline}</p>
-          <p>{date[0]}</p>
-          <p>{article.abstract}</p>
-          <p>See the full article: <a href={article.url}>Link to New York Times</a></p>
+          <img src={article.multimedia[1].url} alt={article.multimedia[1].caption} />
+          <p className='detailed-article-info'>{article.byline}</p>
+          <p className='detailed-article-info'>{date[0]}</p>
+          <p className='detailed-article-info'>{article.abstract}</p>
+          <a href={article.url} className='detailed-article-info'>Link to full article on the New York Times</a>
         </div>}
     </div>
   )
