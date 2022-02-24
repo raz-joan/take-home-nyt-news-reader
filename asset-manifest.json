@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/take-home-nyt-news-reader/static/css/main.ecf786e6.css",
-    "main.js": "/take-home-nyt-news-reader/static/js/main.2228ba99.js",
+    "main.js": "/take-home-nyt-news-reader/static/js/main.42d77e15.js",
     "index.html": "/take-home-nyt-news-reader/index.html",
     "main.ecf786e6.css.map": "/take-home-nyt-news-reader/static/css/main.ecf786e6.css.map",
-    "main.2228ba99.js.map": "/take-home-nyt-news-reader/static/js/main.2228ba99.js.map"
+    "main.42d77e15.js.map": "/take-home-nyt-news-reader/static/js/main.42d77e15.js.map"
   },
   "entrypoints": [
     "static/css/main.ecf786e6.css",
-    "static/js/main.2228ba99.js"
+    "static/js/main.42d77e15.js"
   ]
 }
