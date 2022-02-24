@@ -4,6 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Landing from '../Landing/Landing'
 import DetailedNewsArticle from '../DetailedNewsArticle/DetailedNewsArticle'
 import nytimes from '../../assets/nytimes.png'
+import { articlesFetch } from '../../apiCalls'
 
 function App() {
 
@@ -12,23 +13,29 @@ function App() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE')
-      .then(res => res.json())
+    articlesFetch()
       .then(data => {
-        setArticles(data.results)
+        if (data.results) {
+          setArticles(data.results)
+          setError('')
+        } else {
+          setError('Uh Oh! There was an error connecting to the NYT database.')
+        }
       })
-      .catch(err => setError('Uh Oh! There was an error connecting to the NYT database.'))
   }, [])
 
   const sendRequest = (category) => {
-    fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE`)
-      .then(res => res.json())
+    articlesFetch(category)
       .then(data => {
-        setArticles(data.results)
-        const title = category.slice(0, 1).toUpperCase() + category.slice(1)
-        setSection(title)
+        if (data.results) {
+          setArticles(data.results)
+          setError('')
+          const title = category.slice(0, 1).toUpperCase() + category.slice(1)
+          setSection(title)
+        } else {
+          setError('Uh Oh! There was an error connecting to the NYT database.')
+        }
       })
-      .catch(err => setError('Uh Oh! There was an error connecting to the NYT database.'))
   }
 
   return (
