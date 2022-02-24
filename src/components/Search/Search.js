@@ -11,7 +11,6 @@ const Search = ({ sendRequest }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log('search button clicked with category: ', category)
     if (category) {
       sendRequest(category)
       setCategory('')

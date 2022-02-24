@@ -15,19 +15,15 @@ function App() {
     fetch('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE')
       .then(res => res.json())
       .then(data => {
-        console.log('home response:', data)
         setArticles(data.results)
       })
       .catch(err => setError('Uh Oh! There was an error connecting to the NYT database.'))
   }, [])
 
   const sendRequest = (category) => {
-    console.log('category sent to App: ', category)
-    console.log('current articles: ', articles)
     fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE`)
       .then(res => res.json())
       .then(data => {
-        console.log('category response:', data)
         setArticles(data.results)
         const title = category.slice(0, 1).toUpperCase() + category.slice(1)
         setSection(title)
