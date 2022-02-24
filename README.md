@@ -14,7 +14,7 @@ NYT News Reader Take-home Challenge
 
 ### <ins>Overview</ins>
 
-NYT News Reader is a practice take-home challenge for The Turing School of Software and Design. The goal was to plan, build, and test a simple news application that pulls articles from the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview) in 8 hours or less. Please see the [project board](https://github.com/raz-joan/take-home-nyt-news-reader/projects/1) for the MVP expectations.  
+NYT News Reader is a practice take-home challenge for The Turing School of Software and Design. The goal was to plan, build, and test a simple news application that pulls articles from the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview) in 8 hours or less. Please see the [project board](https://github.com/raz-joan/take-home-nyt-news-reader/projects/1) for the MVP expectations. Afterwards, we gave a 20 minute presentation, received feedback, and were asked to implement that feedback (see [issue #9](https://github.com/raz-joan/take-home-nyt-news-reader/issues/9)).   
 
 ### <ins>Illustrations</ins>
 
